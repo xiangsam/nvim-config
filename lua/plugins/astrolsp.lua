@@ -13,6 +13,8 @@ return {
       codelens = true, -- enable/disable codelens refresh on start
       inlay_hints = false, -- enable/disable inlay hints on start
       semantic_tokens = true, -- enable/disable semantic token highlighting
+      autoformat = true,
+      lsp_handlers = true,
     },
     -- customize lsp formatting options
     formatting = {
@@ -43,6 +45,7 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      basedpyright = require "plugins.lsp.basedpyright",
     },
     -- customize how language servers are attached
     handlers = {
